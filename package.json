@@ -1,0 +1,17 @@
+{
+  "name": "gamba-schedule",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gamba": "node gamba-schedule.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "csv-stringify": "^6.5.2",
+    "puppeteer": "^23.11.1"
+  }
+}

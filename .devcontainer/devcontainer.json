@@ -1,0 +1,9 @@
+{
+  "name": "gamba-schedule",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "runArgs": [
+    "--name",
+    "gamba-schedule"
+  ],
+	"postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh"
+}
