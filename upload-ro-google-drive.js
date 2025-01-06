@@ -73,7 +73,6 @@ function uploadToGoogleDrive(fileName) {
   }
 
   /**
-   * Lists the names and IDs of up to 10 files.
    * @param {OAuth2Client} authClient An authorized OAuth2 client.
    */
   async function createFile(authClient) {
