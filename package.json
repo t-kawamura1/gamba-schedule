@@ -11,7 +11,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
     "csv-stringify": "^6.5.2",
+    "googleapis": "^105.0.0",
     "puppeteer": "^23.11.1"
   }
 }

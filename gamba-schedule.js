@@ -1,6 +1,7 @@
 const pptr = require('puppeteer');
 const fs = require('fs');
 const stringifySync = require("csv-stringify/sync");
+const uploadToGoogleDrive = require('./upload-ro-google-drive');
 
 (async () => {
   const browser = await pptr.launch({
@@ -57,12 +58,16 @@ const stringifySync = require("csv-stringify/sync");
     };
   }));
 
+  const fileName = `gamba_schedule_${currentYear}.csv`;
   const csvString = stringifySync.stringify(gameSchedule, {
     header: true
   });
 
-  fs.writeFileSync(`gamba_schedule_${currentYear}.csv`, csvString);
+  fs.writeFileSync(fileName, csvString);
+  console.log('Schedule creation successful!');
+  
+  uploadToGoogleDrive(fileName);
+  console.log('Schedule upload successful!');
 
   await browser.close();
-  console.log('Schedule creation successful!');
 })();
